@@ -38,35 +38,44 @@ const SignIn=()=>{
 
     }
     return (
-        
-        <div className="mycard">
-             <div className="card auth-card ">
+        <div>
+        < slider className = "slider-size" >
+            <slide className="slides"><h1></h1></slide> 
+            <slide className="slides"><h1></h1></slide>
+            <slide className="slides"><h1></h1></slide> 
+            <slide className="slides"><h1></h1></slide>
+        </slider>
 
-                 <h2> 
-                     VOCAL-LOCAL
-                 </h2>
+            <div className=" auth-card ">
+
+                 < h3 >
+                     Welcome Back !
+                 </h3>
                  <input
                  type="text"
-                 placeholder="email"
+                 placeholder="Email"
                  value={email}
                  onChange={(e)=> setEmail(e.target.value)}
                  />       
                  <input
                  type="password"
-                 placeholder="password"
+                 placeholder="Password"
                  value={password}
                  onChange={(e)=> setPassword(e.target.value)}
                  />
 
-                 <button className="btn waves-effect waves-light "
+                < div className="buttons">
+                 < button className = "btn waves-effect waves-light buttons-left"
                  onClick={()=>PostData()}
                  >Login</button>
                  <h5>
-                  <Link to="/signup">Register New Account</Link>
-                   </h5>   
-                 
-      </div>
-        </div>
+                  < Link to = "/signup"
+                  className = "btn waves-effect waves-light buttons-right" > Register </Link>
+                </h5>
+                </div>  
+
+            </div>
+        </div>  
     )
 }
 

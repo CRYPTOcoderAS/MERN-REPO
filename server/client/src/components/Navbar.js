@@ -34,8 +34,8 @@ const NavBar = ()=>{
            ]
        }else{
          return [
-          <li  key="6"><Link to="/signin">Signin</Link></li>,
-          <li  key="7"><Link to="/signup">Signup</Link></li>
+       < li key = "6" className = "nav-bar"> < Link to = "/signin" > Sign in </Link></li > ,
+          <li  key="7" className="nav-bar"><Link to="/signup">Sign up</Link></li>
          
          ]
        }
@@ -59,7 +59,7 @@ const NavBar = ()=>{
      }
     return(
         <nav>
-        <div className="nav-wrapper white">
+        <div className="nav-wrapper">
           <Link to={state?"/":"/signin"} className="brand-logo left">Vocal-Local</Link>
           <ul id="nav-mobile" className="right">
              {renderList()}

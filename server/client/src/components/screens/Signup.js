@@ -69,43 +69,45 @@ const SignIn  = ()=>{
     }
 
    return (
+    <div>
+
+    < slider2 className = "slider-size" >
+        <slide2 className = "slides" > < h1 > </h1></slide2 >
+        <slide2 className = "slides" > < h1 > </h1></slide2 >
+        <slide2 className = "slides" > < h1 > </h1></slide2 >
+        <slide2 className = "slides" > < h1 > </h1></slide2 >
+    </slider2>
+
       <div className="mycard">
-          <div className="card auth-card input-field">
-            <h2>Vocal-Local</h2>
+          <div className="card auth-card2 input-field">
+            <h3 style={{color:'white'}}>Sign up here !</h3>
             <input
             type="text"
-            placeholder="name"
+            placeholder="Name"
             value={name}
             onChange={(e)=>setName(e.target.value)}
             />
             <input
             type="text"
-            placeholder="email"
+            placeholder="Email"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             />
             <input
             type="password"
-            placeholder="password"
+            placeholder="Password"
             value={password}
             onChange={(e)=>setPasword(e.target.value)}
             />
             <div className="file-field input-field">
-            <div className="btn #64b5f6 blue darken-1">
-                <span>Upload pic</span>
-                <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
             </div>
-            <div className="file-path-wrapper">
-                <input className="file-path validate" type="text" />
-            </div>
-            </div>
-            <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
+            <button className="btn waves-effect waves-light #64b5f6"
             onClick={()=>PostData()}
             >
-                SignUP
+                SIGN UP
             </button>
             <h5>
-                <Link to="/signin">Already have an account ?</Link>
+                <Link to="/signin" style={{color:'white'}}>Already have an account ?</Link>
             </h5>
              
                
@@ -114,6 +116,7 @@ const SignIn  = ()=>{
     
         </div>
       </div>
+    </div>
    )
 }
 
